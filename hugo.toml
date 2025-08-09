@@ -24,6 +24,16 @@ buildFuture = true
         url = "/en/posts/"
         weight = 10
 
+      [[languages.en.menu.main]]
+        name = "Search"
+        url = "/en/search/"
+        weight = 20
+
+      [[languages.en.menu.main]]
+        name = "RSS"
+        url = "/en/index.xml"
+        weight = 99
+
   [languages.zh]
     languageName = "简体中文"
     weight = 2
@@ -34,9 +44,39 @@ buildFuture = true
         url = "/zh/posts/"
         weight = 10
 
+      [[languages.zh.menu.main]]
+        name = "搜索"
+        url = "/zh/search/"
+        weight = 20
+
+      [[languages.zh.menu.main]]
+        name = "RSS"
+        url = "/zh/index.xml"
+        weight = 99
+
 # PaperMod 常用最小参数（主题可根据文档再细化）
 [params]
   defaultTheme = "auto"   # dark/light 自动
   showReadingTime = true
   showToc = true
+  comments = true
+
+[params.giscus]
+  repo = "HughLee824/blog-comments"   # 你的评论仓库
+  repoID = "R_kgDOPa8avA"
+  category = "General"
+  categoryID = "DIC_kwDOPa8avM4Ct92a"
+  mapping = "pathname"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "en"
+  crossorigin = "anonymous"
+
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term     = ["HTML", "RSS"]
 

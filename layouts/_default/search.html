@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="post-content">
+  <h1>{{ .Title }}</h1>
+  <div id="search"></div>
+</article>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      translations: {
+        placeholder: "{{ if eq .Site.Language.Lang "zh" }}搜索文章...{{ else }}Search posts...{{ end }}"
+      }
+    });
+  });
+</script>
+{{ end }}
