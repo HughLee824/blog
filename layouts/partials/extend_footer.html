@@ -1,0 +1,27 @@
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+  // 跟随 PaperMod 的浅/深色
+  const isDark = () =>
+    document.body.classList.contains("dark") ||
+    document.documentElement.classList.contains("dark");
+
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: "loose",
+    theme: isDark() ? "dark" : "default",
+  });
+
+  const run = () => mermaid.run({ querySelector: ".mermaid" });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
+
+  // 主题切换后重跑（PaperMod 会改 body.class）
+  window.addEventListener("storage", (e) => {
+    if (e.key === "pref-theme") run();
+  });
+</script>

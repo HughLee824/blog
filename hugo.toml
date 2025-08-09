@@ -60,6 +60,7 @@ buildFuture = true
   showReadingTime = true
   showToc = true
   comments = true
+  disableSpecial1stPost = true
 
 [params.giscus]
   repo = "HughLee824/blog-comments"   # 你的评论仓库
