@@ -1,7 +1,7 @@
 ---
 title: "Swift 6 迁移陷阱"
 date: 2025-08-09T22:37:10+08:00
-draft: true
+draft: false
 slug: "swift-6-migration-pitfalls"
 tags: ["Swift Concurrency"]
 categories: ["iOS"]
