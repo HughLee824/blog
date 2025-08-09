@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: 2025-08-09T12:00:00Z
+date: 2025-08-09T04:00:00Z
 draft: false
 tags: ["intro"]
 categories: ["meta"]
