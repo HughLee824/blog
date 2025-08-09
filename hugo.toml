@@ -61,6 +61,7 @@ buildFuture = true
   showToc = true
   comments = true
   disableSpecial1stPost = true
+  search = false
 
 [params.giscus]
   repo = "HughLee824/blog-comments"   # 你的评论仓库
@@ -76,7 +77,7 @@ buildFuture = true
   crossorigin = "anonymous"
 
 [outputs]
-  home    = ["HTML", "RSS"]
+  home    = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term     = ["HTML", "RSS"]
