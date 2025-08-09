@@ -1,0 +1,25 @@
+{{- /* 显示条件：前言里 comments: true，或站点全局 params.comments = true */ -}}
+{{- if or .Params.comments .Site.Params.comments -}}
+
+  {{- /* giscus 语言：PaperMod 的 zh 映射到 giscus 的 zh-CN */ -}}
+  {{- $lang := site.Language.Lang -}}
+  {{- if eq $lang "zh" }}{{ $lang = "zh-CN" }}{{ end -}}
+
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ site.Params.giscus.repo }}"
+    data-repo-id="{{ site.Params.giscus.repoID }}"
+    data-category="{{ site.Params.giscus.category }}"
+    data-category-id="{{ site.Params.giscus.categoryID }}"
+    data-mapping="{{ site.Params.giscus.mapping | default "pathname" }}"
+    data-strict="0"
+    data-reactions-enabled="{{ site.Params.giscus.reactionsEnabled | default "1" }}"
+    data-emit-metadata="{{ site.Params.giscus.emitMetadata | default "0" }}"
+    data-input-position="{{ site.Params.giscus.inputPosition | default "bottom" }}"
+    data-theme="{{ site.Params.giscus.theme | default "preferred_color_scheme" }}"
+    data-lang="{{ $lang }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <noscript>请开启 JavaScript 以查看评论。</noscript>
+{{- end -}}
+
