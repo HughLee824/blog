@@ -20,8 +20,10 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self';
+    Content-Security-Policy = """
+      default-src 'self';
       script-src 'self' https://cdn.jsdelivr.net https://giscus.app 'unsafe-inline';
       style-src 'self' 'unsafe-inline';
       img-src 'self' data:;
-      frame-src https://giscus.app;"
+      frame-src https://giscus.app;
+    """
