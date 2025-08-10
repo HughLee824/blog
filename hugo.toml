@@ -1,4 +1,4 @@
-baseURL = "https://blog.indiecraft.app"
+baseURL = "https://blog.indiecraft.app/"
 title = "Hugh's Blog"
 theme = "PaperMod"
 

@@ -78,3 +78,13 @@
 }
 </script>
 {{ end }}
+
+{{/* Canonical: 优先使用 front matter 的 canonicalURL；否则用当前 Permalink */}}
+{{- $canon := .Params.canonicalURL | default .Permalink -}}
+{{- if not (hasPrefix $canon "http") -}}
+  {{- $canon = absURL $canon -}}
+{{- end -}}
+
+{{ if or .IsPage .IsHome .IsSection }}
+<link rel="canonical" href="{{ $canon }}">
+{{ end }}
