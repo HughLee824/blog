@@ -554,3 +554,7 @@ If the filter closure is defined in a Swift 6 module while the publisher is fire
 [7] [Swift Source – SWIFT_IS_CURRENT_EXECUTOR_LEGACY_MODE_OVERRIDE environment variable](https://github.com/swiftlang/swift/blob/swift-6.0-RELEASE/stdlib/public/Concurrency/Actor.cpp#L499)
 
 [8] [Alamofire – Sendable and concurrency adaptation](https://github.com/Alamofire/Alamofire/pull/3920)
+
+
+
+{{< reprint >}}

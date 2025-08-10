@@ -1,0 +1,28 @@
+{{/* reprint shortcode: show by default, allow per-post disable via reprint: false */}}
+{{- $reprint := .Page.Params.reprint | default true -}}
+{{- if $reprint -}}
+
+  {{- $author     := .Page.Params.author        | default .Site.Params.author -}}
+  {{- $license    := .Page.Params.license       | default .Site.Params.license -}}
+  {{- $licenseURL := .Page.Params.license_url   | default .Site.Params.license_url -}}
+  {{- $origTitle  := .Page.Params.original_title| default .Page.Title -}}
+  {{- $origLink   := .Page.Params.original      | default .Page.Permalink -}}
+
+  <div class="reprint-box">
+    <div class="reprint-title">{{ i18n "reprint_title" }}</div>
+    <ul class="reprint-list">
+      <li><strong>{{ i18n "original_title" }}:</strong> {{ $origTitle }}</li>
+      <li><strong>{{ i18n "original_link" }}:</strong> <a href="{{ $origLink }}" rel="canonical">{{ $origLink }}</a></li>
+      <li><strong>{{ i18n "author" }}:</strong> {{ $author }}</li>
+      <li>
+        <strong>{{ i18n "posted_on" }}:</strong> {{ .Page.Date.Format "2006-01-02" }}
+        {{- if ne .Page.Lastmod .Page.Date -}} · <strong>{{ i18n "updated_on" }}:</strong> {{ .Page.Lastmod.Format "2006-01-02" }}{{- end -}}
+      </li>
+      <li><strong>{{ i18n "license" }}:</strong>
+        {{- if $licenseURL -}}<a href="{{ $licenseURL }}" rel="license">{{ $license }}</a>{{- else -}}{{ $license }}{{- end -}}
+      </li>
+    </ul>
+    <p class="reprint-note">{{ i18n "please_attribute" }}</p>
+  </div>
+
+{{- end -}}

@@ -565,3 +565,8 @@ class ViewController: UIViewController {
 [7] [Swift 源码 – SWIFT_IS_CURRENT_EXECUTOR_LEGACY_MODE_OVERRIDE 环境变量](https://github.com/swiftlang/swift/blob/swift-6.0-RELEASE/stdlib/public/Concurrency/Actor.cpp#L499)
 
 [8] [Alamofire Sendable与并发适配](https://github.com/Alamofire/Alamofire/pull/3920)
+
+
+
+{{< reprint >}}
+

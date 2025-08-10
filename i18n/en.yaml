@@ -1,0 +1,17 @@
+- id: reprint_title
+  translation: "Repost & License"
+- id: original_title
+  translation: "Original Title"
+- id: original_link
+  translation: "Original Link"
+- id: author
+  translation: "Author"
+- id: posted_on
+  translation: "Posted on"
+- id: updated_on
+  translation: "Updated on"
+- id: license
+  translation: "License"
+- id: please_attribute
+  translation: "Please attribute and link back when you share."
+

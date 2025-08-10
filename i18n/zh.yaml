@@ -1,0 +1,17 @@
+- id: reprint_title
+  translation: "转载与许可"
+- id: original_title
+  translation: "原文标题"
+- id: original_link
+  translation: "原文链接"
+- id: author
+  translation: "作者"
+- id: posted_on
+  translation: "发布于"
+- id: updated_on
+  translation: "更新于"
+- id: license
+  translation: "许可协议"
+- id: please_attribute
+  translation: "转载时请注明出处并保留链接。"
+

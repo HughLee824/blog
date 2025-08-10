@@ -62,6 +62,9 @@ buildFuture = true
   comments = true
   disableSpecial1stPost = true
   search = false
+  author = "Hugh"                             # 默认作者
+  license = "CC BY-NC-SA 4.0"                 # 默认协议名
+  license_url = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 [params.giscus]
   repo = "HughLee824/blog-comments"   # 你的评论仓库

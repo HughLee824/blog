@@ -1,0 +1,13 @@
+.reprint-box{
+  margin-top: var(--gap);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: .95rem;
+}
+.reprint-title{ font-weight: 600; margin-bottom: .5rem; }
+.reprint-list{ margin: 0 0 .5rem 0; padding-left: 1rem; }
+.reprint-list li{ margin: .2rem 0; }
+.reprint-note{ opacity: .85; }
+
