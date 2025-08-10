@@ -238,7 +238,7 @@ ViewController is `@MainActor`-isolated by default; `DataManager` and `CacheMana
 
 ## **Deep Dive into the Runtime**
 
-### **Swift 5.10 — Lenient**
+### Swift 5.10 — Lenient
 
 ```mermaid
 flowchart TD
@@ -260,9 +260,7 @@ flowchart TD
     IsSameExec -->|false| False5["return false"]
 ```
 
-### **Swift 6.0 — Introduces
-
-swift_task_checkIsolated**
+### Swift 6.0 — Introduces swift_task_checkIsolated
 
 ```mermaid
 flowchart TD
@@ -294,7 +292,7 @@ flowchart TD
     class Crash1,Crash2 bad;
 ```
 
-### **Swift 6.2 — Current (more nuanced flags)**
+### Swift 6.2 — Current (more nuanced flags)
 
 ```mermaid
 flowchart TD
