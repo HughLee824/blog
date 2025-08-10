@@ -5,8 +5,8 @@ draft: false
 slug: "swift-6-migration-pitfalls"
 tags: ["Swift Concurrency"]
 categories: ["iOS"]
-summary: "本文将通过两个真实案例深入剖析 Swift 6 增量迁移中容易踩中的隔离检查陷阱"
-description: "本文将通过两个真实案例深入剖析 Swift 6 增量迁移中容易踩中的隔离检查陷阱"
+summary: "实测总结 Swift 6 增量迁移的易错点、隔离校验的坑与规避策略。"
+description: "实测总结 Swift 6 增量迁移的易错点、隔离校验的坑与规避策略。"
 
 # PaperMod 常用开关（按需保留）
 showToc: true

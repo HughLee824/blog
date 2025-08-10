@@ -15,7 +15,8 @@
 [[redirects]]
   from = "/"
   to = "/en/"
-  status = 302
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
@@ -29,3 +30,20 @@
       connect-src 'self' https://pagefind.app;
       font-src 'self' https://cdn.jsdelivr.net;
     """
+    Cache-Control = "public, max-age=600"
+
+# 版本化静态资源长缓存（1 年 + immutable）
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/pagefind/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

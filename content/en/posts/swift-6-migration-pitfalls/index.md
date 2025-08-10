@@ -1,12 +1,12 @@
 ---
-title: "Swift 6 Migration Pitfalls"
+title: "Swift 6 Migration Pitfalls You Should Know"
 date: 2025-08-09T22:37:27+08:00
 draft: false
 slug: "swift-6-migration-pitfalls"
 tags: ["Swift Concurrency"]
 categories: ["iOS"]
-summary: "This post dissects two real-world cases that frequently trip teams during Swift 6 incremental migration."
-description: "This post dissects two real-world cases that frequently trip teams during Swift 6 incremental migration."
+summary: "Real-world lessons from incrementally migrating to Swift 6—pitfalls, concurrency isolation gotchas, and practical mitigation strategies."
+description: "Real-world lessons from incrementally migrating to Swift 6—pitfalls, concurrency isolation gotchas, and practical mitigation strategies."
 
 # PaperMod 常用开关（按需保留）
 showToc: true

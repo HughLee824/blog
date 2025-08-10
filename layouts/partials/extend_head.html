@@ -1,1 +1,80 @@
 <meta name="google-site-verification" content="ZjFQa8IWVMjxUujRylb3XZ7aOz8Sz8ViwV54L38WKYY" />
+{{/* 每篇文章互相声明多语言版本 */}}
+{{ if .IsPage }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+{{ end }}
+
+{{/* 首页增加 x-default 指向默认语言（/en/） */}}
+{{ if .IsHome }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ end }}
+
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline": {{ .Title | jsonify }},
+  "datePublished": "{{ .Date.UTC.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {"@type":"Person","name": {{ (.Params.author | default .Site.Params.author) | jsonify }}},
+  "license": {{ (.Params.license_url | default .Site.Params.license_url) | jsonify }},
+  "mainEntityOfPage": {{ .Permalink | jsonify }}
+}
+</script>
+{{ end }}
+
+{{ if and .IsPage .CurrentSection }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ (cond (eq .Lang "zh") "首页" "Home") | jsonify }},
+      "item": {{ printf "%s%s/" .Site.BaseURL .Lang | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ (cond (eq .Lang "zh") "文章" "Posts") | jsonify }},
+      "item": {{ printf "%s%s/posts/" .Site.BaseURL .Lang | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+{{ end }}
+
+{{ if .IsSection }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ (cond (eq .Lang "zh") "首页" "Home") | jsonify }},
+      "item": {{ printf "%s%s/" .Site.BaseURL .Lang | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ (cond (eq .Lang "zh") "文章" "Posts") | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+{{ end }}

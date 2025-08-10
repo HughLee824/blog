@@ -10,6 +10,7 @@ defaultContentLanguageInSubdir = true
 pagination.pagerSize = 10
 enableRobotsTXT = true
 buildFuture = true
+enableGitInfo = true
 
 [languages]
 
