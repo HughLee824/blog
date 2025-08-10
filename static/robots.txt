@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.indiecraft.app/sitemap.xml
+Sitemap: https://blog.indiecraft.app/en/index.xml
+Sitemap: https://blog.indiecraft.app/zh/index.xml
+
