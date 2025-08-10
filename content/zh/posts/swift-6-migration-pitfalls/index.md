@@ -172,7 +172,7 @@ final class ViewController: UIViewController, WKNavigationDelegate {
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
-		    DataManager.save(value: "foo") {
+        DataManager.save(value: "foo") {
             print("bar")
         }
     }
