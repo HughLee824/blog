@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hughlee.page/sitemap.xml
-Sitemap: https://hughlee.page/en/index.xml
-Sitemap: https://hughlee.page/zh/index.xml
+Sitemap: https://www.hughlee.page/sitemap.xml
+Sitemap: https://www.hughlee.page/en/index.xml
+Sitemap: https://www.hughlee.page/zh/index.xml
 
