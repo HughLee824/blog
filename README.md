@@ -1,7 +1,7 @@
 # Blog – Hugh’s Notes
 
-> Live site: **https://blog.indiecraft.app**
->  中文入口：**https://blog.indiecraft.app/zh/**
+> Live site: **https://hughlee.page
+>  中文入口：**https://hughlee.page/zh/**
 
 Personal tech blog powered by **Hugo (extended) + PaperMod**, deployed on **Netlify**.
  多语言（English/中文）、Markdown 写作体验，带 **Pagefind 搜索**、**Giscus 评论**、**Mermaid 流程图**、**RSS**、以及基础 **SEO**（canonical、hreflang、JSON-LD）。
