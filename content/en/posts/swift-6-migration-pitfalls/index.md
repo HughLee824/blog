@@ -8,6 +8,16 @@ categories: ["iOS"]
 summary: "Real-world lessons from incrementally migrating to Swift 6—pitfalls, concurrency isolation gotchas, and practical mitigation strategies."
 description: "Real-world lessons from incrementally migrating to Swift 6—pitfalls, concurrency isolation gotchas, and practical mitigation strategies."
 
+cover:
+  image: "cover.webp"      # 相对本文目录
+  alt: "Swift 6 migration pitfalls and concurrency isolation"
+  caption: "Cover — Swift 6 migration pitfalls"
+  relative: true           # 关键：告诉主题这是相对路径
+  hidden: false            # 单篇详情页显示封面
+  hiddenInList: false      # 列表/首页卡片也显示封面
+
+images: ["cover.webp"]     # 作为 Open Graph/Twitter 分享图
+
 # PaperMod 常用开关（按需保留）
 showToc: true
 showBreadCrumbs: true
