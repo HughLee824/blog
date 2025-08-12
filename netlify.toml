@@ -10,12 +10,12 @@
   from = "/"
   to = "/zh/"
   status = 302
-  conditions = {Language = ["zh"]}
+  conditions = { Language = ["zh"] }
 
 [[redirects]]
   from = "/"
   to = "/en/"
-  status = 301
+  status = 302
   force = true
 
 [[headers]]
@@ -32,6 +32,7 @@
       worker-src 'self' blob:;
     """
     Cache-Control = "public, max-age=600"
+    Vary = "Accept-Language"
 
 # 版本化静态资源长缓存（1 年 + immutable）
 [[headers]]
