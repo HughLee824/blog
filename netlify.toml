@@ -6,6 +6,19 @@
   HUGO_VERSION = "0.148.2"
   HUGO_ENABLEGITINFO = "true"
 
+# 单跳永久重定向：无斜杠 → 有斜杠
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zh"
+  to = "/zh/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/"
   to = "/zh/"
@@ -17,6 +30,11 @@
   to = "/en/"
   status = 302
   force = true
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
 
 [[headers]]
   for = "/*"
